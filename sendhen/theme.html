@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="okvir">
+  <tr>
+    <td>
+      <table width="100%" cellspacing="0">
+        <tr id="header"> 
+          <td width="16%" id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/sendhen.gif" alt="SENDHEN design France" border="0" /></a></td>
+          <td width="52%"></td>
+        </tr>
+      </table>
+	  <table cellspacing="0" cellpadding="0" width="100%" border="0">
+        <tr align="center"> 
+          <td width="288" bgcolor="#6B6B6B"></td>
+          <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/index.php">Accueil</a></td>
+          <td width="1" bgcolor="#d7d7d7"></td>
+          <td id="headmenu"><a class="menuHead" href="<{$xoops_url}>/modules/news/">Actualités</a></td>
+          <td width="1" bgcolor="#d7d7d7"></td>
+          <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/xoopsfaq/">SENDHEN et vous</a></td>
+          <td width="1" bgcolor="#d7d7d7"></td>
+          <td id="headmenu"><a class="menuHead" 
+                  href="http://www.sendhen.com">E-boutique</a></td>
+          <td width="1" bgcolor="#d7d7d7"></td>
+          <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/contact/">Nous contacter</a></td>
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" id="glavna">
+        <td id="leftcolumn"> 
+          <!-- Start left blocks loop -->
+          <{foreach item=block from=$xoops_lblocks}> <div class="<{cycle values="blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End left blocks loop -->
+          <br /> <br />
+          </td>
+        <td id="centercolumn"> 
+          <!-- Display center blocks if any -->
+          <{if $xoops_showcblock == 1}> <table class="sadrzaj" cellspacing="0">
+            <tr> 
+              <td id="centerCcolumn" colspan="2"> 
+                <!-- Start center-center blocks loop -->
+                <{foreach item=block from=$xoops_ccblocks}> <table align="center" cellpadding="0" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-center blocks loop -->
+              </td>
+            </tr>
+            <tr> 
+              <td id="centerLcolumn"> 
+                <!-- Start center-left blocks loop -->
+                <{foreach item=block from=$xoops_clblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-left blocks loop -->
+              </td>
+              <td id="centerRcolumn"> 
+                <!-- Start center-right blocks loop -->
+                <{foreach item=block from=$xoops_crblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-right blocks loop -->
+              </td>
+            </tr>
+          </table>
+          <{/if}> 
+          <!-- End display center blocks -->
+          <div id="content"> <{$xoops_contents}> </div>
+          <br /> <br /> <br /> </td>
+        <{if $xoops_showrblock == 1}> 
+        <td id="rightcolumn"> 
+          <!-- Start right blocks loop -->
+          <{foreach item=block from=$xoops_rblocks}> <div class="<{cycle values="blockTitle,blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End right blocks loop -->
+          <br /> <br /> </td>
+        <{/if}> </tr>
+        <tr> 
+          <td colspan="3"></td>
+        </tr>
+    </table> </td>
+  </tr>
+</table>
+<table width="758"  border="0" align="center" cellpadding="0" cellspacing="0" class="dole">
+  <tr>
+    <td><div class="privatnost"><br />
+        <!-- Start Custom Links  /  Edit or remove next line -->
+        <a href="<{$xoops_url}>/modules/news/index.php?storytopic=2">Mentions 
+        légales</a>&nbsp;|&nbsp XX Corporate tous droits r&eacute;serv&eacute;s 2005 &nbsp;|&nbsp;<a href="<{$xoops_url}>/modules/contact/">Contact</a><br />
+          <br />
+ <!-- End Custom Links -->
+  <br />
+        Copyright © 2005 by <a href="<{$xoops_url}>" target="_self">XX Corporate</a> 
+        &nbsp;|&nbsp; 
+        <!-- Webmaster, dont remove this text. It denied by license! -->
+        <{$xoops_footer}> &nbsp;|&nbsp; 
+        <!-- Webmaster, dont remove this text. It denied by license! -->
+        <!-- Design by <a href="http://www.7dana.com" target="_blank">7dana.com</a>! -->
+        <!--End  "design by" text! -->
+         <br />
+</div></td>
+  </tr>
+</table>
+
+<br>
+</body>
+</html>
+
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
+
